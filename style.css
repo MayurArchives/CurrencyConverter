@@ -15,12 +15,12 @@ body {
     background-color: #fff;
     padding: 2rem;
     border-radius: 1rem;
-    height: 45vh;
-    width: 40vh;
+    height: 50vh;
+    width: 59vh;
 }
 
 form {
-    margin: 2rem 0 1rem 0;
+    margin: 2rem 1rem 0;
 }
 
 form select,
@@ -39,11 +39,30 @@ form input {
     padding-left: 0.5rem;
 }
 
+
+.dropDwon-container {
+    /* background: black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 2em;
+}
+
+.dropDwon-container span{
+    position: relative;
+    top: 0.5em;
+}
 .dropdown {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-top: 2rem;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    /* margin-top: 2rem; */
+}
+.to{
+    /* padding: 2em; */
 }
 
 .dropdown .material-symbols-outlined {
@@ -57,16 +76,18 @@ form input {
 
 .select-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     min-width: 6rem;
+    max-height: 1.25em;
     border-radius: 0.5rem;
     border: 1px solid lightgray;
+    padding: 1em;
 }
 
 .msg {
     margin: 2rem 0;
-    text-align: center;
+    text-align: left;
 }
 
 form button {
@@ -74,9 +95,9 @@ form button {
     background-color: #af4d98;
     color: white;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.4s ease-in-out;
 }
 
 form button:hover {
-    background-color: #93387e;
+    background-color: rgb(62, 16, 126);
 }
