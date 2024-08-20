@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Currency Converter</h2>
+        <form>
+            <div class="amount">
+                <label for="amount">Enter Amount</label>
+                <input id="amount" value="100" type="number" />
+            </div>
+            <div class="dropdown">
+                <label for="from">From</label>
+                <div class="select-container flex items-center">
+                    <img src="https://cdn-icons-png.flaticon.com/512/555/555526.png" class="w-6 h-6 mr-2"/>
+                    <select id="from" name="from">
+                        <option value="USD">USD</option>
+                        <option value="INR">INR</option>
+                        <option value="EUR">EUR</option>
+                        <option value="AUD">AUD</option>
+                    </select>
+                </div>
+            </div>
+            <span class="material-symbols-outlined">
+                sync_alt
+            </span>
+            <div class="to">
+                <label for="to">To</label>
+                <div class="select-container flex items-center">
+                    <img src="https://st3.depositphotos.com/1052036/17813/v/450/depositphotos_178133270-stock-illustration-tricolor-indian-flag-background-for.jpg" class="w-6 h-6 mr-2"/>
+                    <select id="to" name="to">
+                        <option value="USD">USD</option>
+                        <option value="INR" selected>INR</option>
+                        <option value="EUR">EUR</option>
+                        <option value="AUD">AUD</option>
+                    </select>
+                </div>
+            </div>
+            <div class="msg">1 USD = 80 INR</div>
+            <button type="button">Get Exchange Rate</button>
+        </form>
+    </div>
+</body>
+</html>
