@@ -17,4 +17,17 @@ for (let select of dropdowns) {
 
     select.append(newOption);
   }
+  select.addEventListener("change", (evt)=>{
+    updateFlag(evt.target);
+  
+    });
 }
+const updateFlag = (Element) => {
+  let currCode= element.value;
+  let countryCode = countryList[currCode];
+  let newSrc = `https://cdn-icons-png.flaticon.com${countryCode}/512/555/555526.png`
+  let img =  element.parentElement.querySelector("img");
+  img.src = newSrc;
+
+};
+ 
