@@ -11,13 +11,19 @@
     <link rel="stylesheet" href="style.css" />
     <script type="module" src="index.js" defer></script>
     <script type="module" src="codes.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <body>
-    <div class="container">
-      <h2>Currency Converter</h2>
-      <form>
+    <div
+      class="container animate__animated animate__bounceInRight animate__slow"
+    >
+      <h2 class="container-heading">Currency Converter</h2>
+      <form id="form">
         <div class="amount">
-          <label for="amount">Enter Amount</label>
+          <label for="amount" class="form-label">Enter Amount :</label>
           <input id="amount" value="100" type="number" />
         </div>
         <div class="dropDwon-container">
@@ -38,7 +44,7 @@
           </div>
           <span class="material-symbols-outlined"> sync_alt </span>
           <div class="dropdown to">
-            <label for="to">To</label>
+            <label for="to">To </label>
             <div class="select-container flex items-center">
               <img
                 src="https://st3.depositphotos.com/1052036/17813/v/450/depositphotos_178133270-stock-illustration-tricolor-indian-flag-background-for.jpg"
@@ -54,6 +60,7 @@
           </div>
         </div>
         <div class="msg">1 USD = 80 INR</div>
+        <h3 class="conv-ans">Start Conversion now !!!</h3>
         <button type="button" class="btn">Get Exchange Rate</button>
       </form>
     </div>

@@ -4,7 +4,13 @@ const BASE_URL =
   "https://v6.exchangerate-api.com/v6/af8e8a09d6b95d7e32c2f1e3/pair/";
 const MSSG_URL = "https://api.exchangerate.host/convert";
 
+let conv_rate = 80;
+let amount = document.querySelector(".amount input");
+let userAmount = amount.value;
+let form = document.getElementById("form");
 let btn = document.querySelector(".btn");
+let convHeading = document.querySelector(".conv-ans");
+
 let msgDiv = document.querySelector(".msg");
 const dropdowns = document.querySelectorAll(".dropdown select");
 
@@ -22,17 +28,31 @@ for (let select of dropdowns) {
     select.append(newOption);
   }
   select.addEventListener("change", (evt) => {
-    updateExchangeRate();
+    const fromCurrency = document.querySelector("select[name='from']").value;
+    const toCurrency = document.querySelector("select[name='to']").value;
+    const amount = 1;
+    updateExchangeRate(fromCurrency, toCurrency, amount);
     updateFlag(evt.target);
   });
 }
 
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
+
+amount.addEventListener("change", (e) => {
+  let val = e.target.value;
+  console.log(val);
+  userAmount = val;
+});
 btn.addEventListener("click", () => {
-  const fromCurrency = document.querySelector("select[name='from']").value;
-  const toCurrency = document.querySelector("select[name='to']").value;
-  const amount = 1;
-  updateExchangeRate(fromCurrency, toCurrency, amount);
-  updateExchangeRate();
+  console.log(conv_rate, Number(userAmount) * conv_rate);
+
+  convHeading.innerText = `${Number(userAmount)} ${document
+    .querySelector("select[name='from']")
+    .value.toUpperCase()} =  ${(Number(userAmount) * conv_rate).toFixed(
+    3
+  )} ${document.querySelector("select[name='to']").value.toUpperCase()}`;
 });
 
 const updateFlag = (element) => {
@@ -70,6 +90,9 @@ const updateExchangeRate = async (fromCurrency, toCurrency, amount) => {
       }
 
       const rate = data.result;
+      console.log("rate" + rate);
+
+      conv_rate = rate;
 
       if (rate) {
         msgDiv.innerText = `1 ${fromCurrency} = ${rate} ${toCurrency}`;
@@ -82,3 +105,5 @@ const updateExchangeRate = async (fromCurrency, toCurrency, amount) => {
     }
   }
 };
+
+updateExchangeRate("USD", "INR", 1);

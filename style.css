@@ -1,103 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  font-family: Noto Sans;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: coral;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: radial-gradient(
+    circle at -4.9% 51.2%,
+    rgb(255, 124, 0) 0%,
+    rgb(255, 124, 0) 15.9%,
+    rgb(255, 163, 77) 15.9%,
+    rgb(255, 163, 77) 24.4%,
+    rgb(19, 30, 37) 24.5%,
+    rgb(19, 30, 37) 66%
+  );
 }
 
 .container {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 1rem;
-    height: 50vh;
-    width: 59vh;
+  background: rgba(219, 157, 245, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 2rem;
+  border-radius: 1rem;
+  height: 75vh;
+  width: 50%;
+  position: absolute;
+  right: 5em;
 }
-
+.container-heading {
+  font-size: 3.8rem;
+  margin-bottom: 1rem;
+  color: antiquewhite;
+}
 form {
-    margin: 2rem 1rem 0;
+  margin: 2rem 1rem 0;
 }
 
 form select,
 form button,
 form input {
-    width: 100%;
-    border: none;
-    outline: none;
-    border-radius: 0.75rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 0.75rem;
 }
-
+.form-label {
+  font-size: 1.5em;
+  font-weight: 500;
+  color: antiquewhite;
+}
 form input {
-    border: 1px solid lightgray;
-    font-size: 1rem;
-    height: 3rem;
-    padding-left: 0.5rem;
+  border: 1px solid lightgray;
+  font-size: 1rem;
+  height: 3rem;
+  padding-left: 0.5rem;
+  margin-top: 0.5em;
+  color: black;
+  font-size: 1.2em;
 }
-
 
 .dropDwon-container {
-    /* background: black; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 2em;
+  /* background: black; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 2em;
+  font-size: 1.5em;
+  font-weight: 800;
 }
 
-.dropDwon-container span{
-    position: relative;
-    top: 0.5em;
+.dropDwon-container span {
+  position: relative;
+  top: 1em;
 }
 .dropdown {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    justify-content: left;
-    align-items: flex-start;
-    /* margin-top: 2rem; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
+  /* margin-top: 2rem; */
 }
-.to{
-    /* padding: 2em; */
+
+.dropdown label {
+  color: antiquewhite;
+}
+
+.material-symbols-outlined {
+  margin-bottom: 1.5em;
+  font-size: 1.5em;
 }
 
 .dropdown .material-symbols-outlined {
-    font-size: 1.5rem;
-    margin-top: 1rem;
+  font-size: 1.5rem;
+  margin-top: 1rem;
 }
 
 .select-container img {
-    max-width: 2.5rem;
+  max-width: 4.5rem;
+
+  overflow: hidden;
+  /* border-radius: 50%; */
 }
 
 .select-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-width: 6rem;
-    max-height: 1.25em;
-    border-radius: 0.5rem;
-    border: 1px solid lightgray;
-    padding: 1em;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  min-width: 6rem;
+  max-height: 1.25em;
+  border-radius: 0.5rem;
+  border: px solid black;
+  background: transparent;
+  /* padding: 1em; */
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.select-container select {
+  margin-left: 0.5em;
+  font-size: 0.75em;
+  padding: 0.65em;
 }
 
 .msg {
-    margin: 2rem 0;
-    text-align: left;
+  margin: 2rem 0;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: antiquewhite;
+}
+
+.conv-ans {
+  margin-top: -0.5em;
+  margin-bottom: 0.5em;
+  width: 100%;
+  text-align: center;
+  color: rgb(212, 156, 82);
+  font-size: 2em;
 }
 
 form button {
-    height: 3rem;
-    background-color: #af4d98;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.4s ease-in-out;
+  height: 3rem;
+  background-color: #af4d98;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: 600;
+  transition: background-color 0.4s ease-in-out;
 }
 
 form button:hover {
-    background-color: rgb(62, 16, 126);
+  background-color: rgb(219, 116, 19);
 }
